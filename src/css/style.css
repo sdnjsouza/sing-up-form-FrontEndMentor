@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{/* reset */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+    
+}
+html{
+    background-color: #e9e7e7de;
+}
+.main{
+    margin: 80px 40px;  
+}
+.container{
+    display: grid;
+    grid:"description info-price-form"
+        "description info-price-form";
+    padding: 3.0em;
+    background: #ff7978 url(../img/bg-intro-desktop.png) no-repeat center;
+
+}
+ 
+
+.description{
+    grid: description;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    color: #EFFAFA;
+}
+.description h1{
+    font-size: 2.0em;
+    margin-bottom: 20px;
+    
+}
+
+.info-price-form{
+    grid: info-price-form;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+.info-price{
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: #EFFAFA;
+    background-color:#5d54a3;
+}
+.section-form {
+    background-color: #FFFFFE;
+    border-radius: 5px;
+    padding: 20px;
+    height: 400px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height:90%;
+}
+.form label{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 80%;
+}
+  
+.form label input{
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    height: 35px;
+    width: 100%;
+    padding-left: 20px;
+
+    border: 1px solid;
+    border-radius:5px ;
+   
+}
+/* ERROR MENSAGE */
+.form label img,
+.form label i{
+display: none;
+}
+.form .error-mensage.visible img,
+.form .error-mensage.visible i{
+    display: block;
+}
+.form .error-mensage.visible input{
+    border-color: #ff7978;
+}
+
+.form label img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 7px;
+}
+.form label i{
+    position: absolute;
+    right: 0;
+    bottom: 1;
+    font-size: 10px;
+    color:  #ff7978;
+}
+
+/* ERROR MENSAGE */
+.form label input[type="submit"]{
+border: 0;
+border-radius: 5px;
+color: #f0f8ff;
+background-color: #38cc8c;
+margin-left: 6px;
+font-weight: 700;
+}
+.form input[type="submit"]:hover{
+   background-color: #37c386;
+   cursor: pointer;
+}
+.section-form p {
+    font-size: 12px;
+   text-align: center;
+   
+}
+.section-form p a{
+  
+    color: #e27e7e ;
+}
+.section-form p a:hover{
+    color: #eb9999 ;
+}
+
+
+@media (max-width:690px){
+    .main{
+        margin:0;
+    }
+    .container{
+        display: grid;
+        grid:"description"
+        "info-price-form" ;
+        background: #ff7978 url('../img/bg-intro-mobile.png') no-repeat center;
+    
+    }
+    .description h1{
+      
+        text-align: center;
+    }
+    .description p{
+        text-align: center;
+    }
+    .info-price-form{
+        margin-top: 2.0em;
+    }
+ }
